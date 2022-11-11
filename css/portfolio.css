@@ -139,16 +139,32 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+.header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 276px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main-light-color);
+}
+@media screen and (min-width: 768px) {
+  .header__btn {
+    display: none;
+  }
+}
 .header__list {
   display: none;
+  gap: 50px;
+  margin-left: 88px;
 }
 @media screen and (min-width: 768px) {
   .header__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 50px;
-    margin-left: 88px;
   }
 }
 @media screen and (min-width: 1200px) {

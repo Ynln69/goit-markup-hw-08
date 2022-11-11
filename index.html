@@ -38,6 +38,16 @@
               <a href="#" class="header__link">Контакти</a>
             </li>
           </ul>
+          <button
+            class="header__btn js-open-menu"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
         </nav>
         <!--Контактна інформація-->
         <ul class="header__contact">
@@ -504,10 +514,10 @@
       </div>
     </footer>
     <!-- Мобільне меню -->
-    <div class="mobile-menu js-menu-container">
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
       <button class="mobile-menu__btn js-close-menu" type="button">
         <svg width="40" height="40">
-          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+          <use href="./images/symbol-defs.svg#icon-close"></use>
         </svg>
       </button>
       <nav class="mobile-menu__nav">
