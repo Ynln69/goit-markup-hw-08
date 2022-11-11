@@ -40,17 +40,17 @@
           </ul>
         </nav>
         <!--Контактна інформація-->
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link">
+        <ul class="header__contact">
+          <li class="header__contact-item">
+            <a href="mailto:info@devstudio.com" class="header__contact-link">
               <svg width="16" height="12">
                 <use href="./images/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link">
+          <li class="header__contact-item">
+            <a href="tel:+380961111111" class="header__contact-link">
               <svg width="10" height="16">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
@@ -177,7 +177,7 @@
         <div class="container">
           <h2 class="title">Наша команда</h2>
           <ul class="team__list">
-            <li>
+            <li class="team__item">
               <img
                 src="./images/teamcard.jpg"
                 alt="фотопортрет Ігоря"
@@ -224,7 +224,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team__item">
               <img
                 src="./images/teamcard2.jpg"
                 alt="фотопортрет Ольги"
@@ -271,7 +271,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team__item">
               <img
                 src="./images/teamcard3.jpg"
                 alt="фотопортрет Миколи"
@@ -318,7 +318,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team__item">
               <img
                 src="./images/teamcard4.jpg"
                 alt="фотопортрет Михайла "
@@ -372,15 +372,15 @@
       <section class="customers section">
         <div class="container">
           <h2 class="title">Постійні клієнти</h2>
-          <ul class="customers">
-            <li>
+          <ul class="customers__list">
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-yaco"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use
@@ -389,28 +389,28 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-foster-peters"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-tag-line"></use>
@@ -503,6 +503,46 @@
         </div>
       </div>
     </footer>
+    <!-- Мобільне меню -->
+    <div class="mobile-menu js-menu-container">
+      <button class="mobile-menu__btn js-close-menu" type="button">
+        <svg width="40" height="40">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="mobile-menu__contact">
+        <li class="mobile-menu__contact-item">
+          <a href="tel:+380961111111" class="mobile-menu__contact-tel"></a>+38
+          096 111 11 11
+        </li>
+        <li class="mobile-menu__contact-item">
+          <a
+            href="mailto:info@devstudio.com"
+            class="mobile-menu__contact-mail"
+          ></a
+          >info@devstudio.com
+        </li>
+      </ul>
+      <ul class="mobile-menu__networks">
+        <li><a class="mobile-menu__networks-link" href="#">Instagram</a></li>
+        <li><a class="mobile-menu__networks-link" href="#">Twitter</a></li>
+        <li><a class="mobile-menu__networks-link" href="#">Facebook</a></li>
+        <li><a class="mobile-menu__networks-link" href="#">LinkedIn</a></li>
+      </ul>
+    </div>
     <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -555,5 +595,6 @@
     </div>
     <!-- Скрипт -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
