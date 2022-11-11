@@ -14,14 +14,13 @@
     transition: transform 250ms var(--time-function);
 
     background-color: var(--main-light-color);
-    overflow-y: scroll;
         
         &.is-open {
                 transform: translateX(0);
             }
-    @media screen and (min-width:768px) {
-        display: none;
-    }
+            @media screen  and (min-width:768px) {
+                display: none;
+            }
     }
 
    .mobile-menu__btn {
@@ -32,7 +31,12 @@
     padding: 0;
     border: none;
     cursor: pointer;
-    background-color: var(--main-light-color)
+    background-color: var(--main-light-color);
+    transition: fill 250ms var(--time-function);
+
+        &:hover, &:focus {
+            fill: var(--accent-color);
+        }
    }
 
     .mobile-menu__list {

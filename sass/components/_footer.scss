@@ -5,25 +5,46 @@
   background-color: var(--boder-bg-color);
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
-  gap: 94px;
-}
-
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media screen and (min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 60px;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 94px;
+  }
+}
+
+
+.footer__content {
+  @media screen and (max-width:1199px) {
+    text-align: center;
+  }
 }
 .footer__list {
   font-style: normal;
   @extend %list;
 }
-
 .footer__item:not(:last-child) {
   margin-bottom: 9px;
 }
-
 .footer__link {
   @extend %link;
   color: var(--main-light-color);
@@ -38,7 +59,6 @@
       color: var(--accent-color);
   }
 }
-
 .footer__contact {
   @extend %link;
   color: var(--address-text-color);
@@ -52,6 +72,12 @@
   }
 }
 
+.footer-join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 .footer-join__title {
   margin-bottom: 20px;
   color: var(--main-light-color);
@@ -62,7 +88,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .footer-join__list {
   @extend %list;
   display: flex;
@@ -70,7 +95,6 @@
   align-items: center;
   gap: 10px;
 }
-
 .footer-join__link {
   @extend %link;
   display: flex;
@@ -91,6 +115,15 @@
   }
 }
 
+.footer-form{
+    text-align: center;
+ @media screen and (min-width:768px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+}
 .footer-form__text {
   margin-bottom: 20px;
 
@@ -102,20 +135,30 @@
   text-transform: uppercase;
 }
 .footer-form__box {
+ @media screen and  (min-width:1200px) {
   display: flex;
+ }
 }
 .footer-form__input {
   display: block;
-  width: 358px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline: none;
 
   background-color: var(--boder-bg-color);
+  @media screen and (min-width:768px) {
+    width: 450px;
+  }
+  @media screen  and (min-width:1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .footer-form__btn {
