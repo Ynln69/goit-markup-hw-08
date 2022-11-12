@@ -22,6 +22,9 @@ body {
   color: var(--main-font-color);
   background-color: var(--main-light-color);
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -131,7 +134,15 @@ img {
   width: 100%;
   border: 1px solid var(--border-header-color);
 }
-.header__container, .header__nav {
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +156,6 @@ img {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-left: 276px;
   border: none;
   cursor: pointer;
   background-color: var(--main-light-color);
@@ -262,7 +272,7 @@ img {
 }
 
 .hero {
-  max-width: 480px;
+  max-width: 100%;
   height: 400px;
   margin-right: auto;
   margin-left: auto;
@@ -291,7 +301,7 @@ img {
   }
 }
 .hero__title {
-  width: 360px;
+  width: 100%;
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: auto;
@@ -355,7 +365,7 @@ img {
 }
 
 .feature__item {
-  width: 450px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .feature__item {
@@ -372,7 +382,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   -webkit-box-pack: center;
@@ -410,7 +420,7 @@ img {
 }
 
 .feature__text {
-  width: 450px;
+  width: 100%;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -519,7 +529,7 @@ img {
   }
 }
 .team__box {
-  width: 450px;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -799,9 +809,6 @@ img {
   background-color: var(--accent-color);
 }
 
-.footer-form {
-  text-align: center;
-}
 @media screen and (min-width: 768px) {
   .footer-form {
     display: -webkit-box;
@@ -813,6 +820,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-form {
     text-align: center;
   }
 }
@@ -895,11 +906,12 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 480px;
-  height: 796px;
+  width: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
+  padding-right: 83px;
   padding-left: 40px;
+  height: 796px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   -webkit-transform: translateX(100%);
@@ -913,11 +925,6 @@ img {
 .mobile-menu.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 
 .mobile-menu__btn {
@@ -945,7 +952,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 35px;
-  margin-bottom: 302px;
+  margin-bottom: 306px;
 }
 
 .mobile-menu__link {
@@ -988,6 +995,7 @@ img {
 }
 
 .mobile-menu__networks {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1240,29 +1248,29 @@ img {
   gap: 7px;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .form__accep {
-    font-size: 12px;
-    line-height: 1.1666666667;
+    font-size: 14px;
+    line-height: 1.7142857143;
   }
 }
 
 .form__link {
   color: var(--accent-color);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   text-decoration: underline;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .form__link {
-    font-size: 12px;
-    line-height: 1.1666666667;
+    font-size: 14px;
+    line-height: 1.7142857143;
   }
 }
 

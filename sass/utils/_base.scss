@@ -5,7 +5,12 @@ body {
   
     color: var(--main-font-color);
     background-color: var(--main-light-color);
+
+    &.modal-open {
+      overflow: hidden;
+    }
   }
+
 
   
   h1,

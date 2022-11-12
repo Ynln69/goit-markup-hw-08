@@ -22,6 +22,9 @@ body {
   color: var(--main-font-color);
   background-color: var(--main-light-color);
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -131,7 +134,15 @@ img {
   width: 100%;
   border: 1px solid var(--border-header-color);
 }
-.header__container, .header__nav {
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +156,6 @@ img {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-left: 276px;
   border: none;
   cursor: pointer;
   background-color: var(--main-light-color);
@@ -545,9 +555,6 @@ img {
   background-color: var(--accent-color);
 }
 
-.footer-form {
-  text-align: center;
-}
 @media screen and (min-width: 768px) {
   .footer-form {
     display: -webkit-box;
@@ -559,6 +566,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-form {
     text-align: center;
   }
 }
@@ -641,11 +652,12 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 480px;
-  height: 796px;
+  width: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
+  padding-right: 83px;
   padding-left: 40px;
+  height: 796px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   -webkit-transform: translateX(100%);
@@ -659,11 +671,6 @@ img {
 .mobile-menu.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 
 .mobile-menu__btn {
@@ -691,7 +698,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 35px;
-  margin-bottom: 302px;
+  margin-bottom: 306px;
 }
 
 .mobile-menu__link {
@@ -734,6 +741,7 @@ img {
 }
 
 .mobile-menu__networks {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
