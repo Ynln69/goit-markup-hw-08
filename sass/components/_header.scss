@@ -9,6 +9,10 @@
       &__nav {
         display: flex;
         align-items: center;
+       @media screen and (max-width:761px) {
+        justify-content: space-between;
+        flex-grow: 1;
+       }
       }
       &__btn {
         display: flex;
@@ -29,16 +33,14 @@
       &__list {
         @extend %list;
         display: none;
-        gap: 50px;
-        margin-left: 88px;
-      
         @media screen and (min-width:768px) {
           display: flex;
+          gap: 50px;
+          margin-left: 88px;
         }
-        @media screen and (min-width:1200px) {
+        @media screen and (min-width:1200px){
           margin-left: 93px;
         }
-
       }
       
       &__link {
@@ -84,12 +86,10 @@
           display: flex;
           flex-direction: column;
           gap: 10px;
-          margin-left: 90px;
+          margin-left: auto;
         }
         @media screen and (min-width:1200px) {
-          display: flex;
           flex-direction: row;
-          margin-left: auto;
           gap: 50px;
         }
         

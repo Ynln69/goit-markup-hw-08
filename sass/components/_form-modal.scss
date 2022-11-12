@@ -104,9 +104,13 @@
     margin-bottom: 30px;
 
     font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14/12);
+    font-size: 10px;
+    line-height: calc(12/10);
     letter-spacing: 0.03em;
+    @media screen and (min-width:480px) {
+      font-size: 12px;
+      line-height: calc(14/12);
+    }
     @media screen and (min-width:1200px) {
       font-size: 14px;
       line-height: calc(24 / 14);
@@ -115,10 +119,14 @@
   .form__link {
     color: var(--accent-color);
     font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14/12);
+    font-size: 10px;
+    line-height: calc(12/10);
     letter-spacing: 0.03em;
     text-decoration: underline;
+    @media screen and (min-width:480px) {
+      font-size: 12px;
+      line-height: calc(14/12);
+    }
     @media screen and (min-width:1200px) {
       font-size: 14px;
       line-height: calc(24 / 14);

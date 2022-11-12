@@ -1,5 +1,5 @@
 .hero {
-    max-width: 100%;
+    max-width: 480px;
     height: 400px;
     margin-right: auto;
     margin-left: auto;
@@ -12,24 +12,12 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/team-work.jpg);
+      url(../../images/header-img-m.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
-
-    @media screen and (min-width:768px) {
-      max-width: 768px;
-      height: 400px;
-    }
-
-    @media screen and (min-width:1200px) {
-      max-width: 1600px;
-      height: 600px;
-      padding-top: 200px;
-      padding-bottom: 200px;
-    }
-
+  
         &__title {
           width: 100%;
           margin-right: auto;
@@ -48,7 +36,6 @@
             font-size: 44px;
             line-height: calc(60/44);
           }
-      
         }
         
         &__btn {
@@ -74,6 +61,69 @@
           }
         }
   }
-  
-  
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/header-img-m@2x.jpg);
+    }
+}
+@media screen and (min-width:768px) {
+  .hero {
+    background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url(../../images/header-img-t.jpg);
+  max-width: 768px;
+  height: 400px;
+  }
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        .hero {
+          background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/header-img-t@2x.jpg);
+      }
+        }
+}
+@media screen and (min-width:1200px) {
+  .hero {
+    background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url(../../images/team-work.jpg);
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  }
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+       .hero {
+        background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/team-work@2x.jpg);
+        }
+       }
+}
  
