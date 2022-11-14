@@ -142,12 +142,19 @@
           <ul class="about__list">
             <li class="about__item">
               <div class="about__thumb">
-                <img
-                  src="./images/img.jpg"
-                  alt="розробка сайту та написання коду"
-                  width="370"
-                  class="about__img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img.jpg 1x, ./images/img@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    loading="“lazy”"
+                    src="./images/img.jpg"
+                    alt="розробка сайту та написання коду"
+                    sizes="100vw"
+                    class="about__img"
+                  />
+                </picture>
                 <div class="about__bg">
                   <p class="about__text">Десктопні додатки</p>
                 </div>
@@ -155,12 +162,19 @@
             </li>
             <li class="about__item">
               <div class="about__thumb">
-                <img
-                  src="./images/img2.jpg"
-                  alt="розробка мобільних додатків"
-                  width="370"
-                  class="about__img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    loading="“lazy”"
+                    src="./images/img2.jpg"
+                    alt="розробка мобільних додатків"
+                    sizes="100vw"
+                    class="about__img"
+                  />
+                </picture>
                 <div class="about__bg">
                   <p class="about__text">Мобільні додатки</p>
                 </div>
@@ -168,12 +182,19 @@
             </li>
             <li class="about__item">
               <div class="about__thumb">
-                <img
-                  src="./images/img3.jpg"
-                  alt="вектор кольорова палітра"
-                  width="370"
-                  class="about__img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    loading="“lazy”"
+                    src="./images/img3.jpg"
+                    alt="вектор кольорова палітра"
+                    sizes="100vw"
+                    class="about__img"
+                  />
+                </picture>
                 <div class="about__bg">
                   <p class="about__text">Дизайнерські рішення</p>
                 </div>
@@ -188,11 +209,32 @@
           <h2 class="title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/teamcard.jpg"
-                alt="фотопортрет Ігоря"
-                sizes="(min-width:1200px) 450px, (min-width:768px) 50vw, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teamcard.jpg    1x,
+                    ./images/mobile/teamcard@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teamcard.jpg    1x,
+                    ./images/tablet/teamcard@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/teamcard.jpg 1x, ./images/teamcard@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img
+                  loading="“lazy”"
+                  src="./images/teamcard.jpg"
+                  alt="фотопортрет Ігоря"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__text">Product Designer</p>
@@ -235,11 +277,35 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/teamcard2.jpg"
-                alt="фотопортрет Ольги"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teamcard2.jpg    1x,
+                    ./images/mobile/teamcard2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teamcard2.jpg    1x,
+                    ./images/tablet/teamcard2@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard2.jpg    1x,
+                    ./images/teamcard2@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  loading="“lazy”"
+                  src="./images/teamcard2.jpg"
+                  alt="фотопортрет Ольги"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p lang="en" class="team__text">Frontend Developer</p>
@@ -282,11 +348,35 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/teamcard3.jpg"
-                alt="фотопортрет Миколи"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teamcard3.jpg    1x,
+                    ./images/mobile/teamcard3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teamcard3.jpg    1x,
+                    ./images/tablet/teamcard3@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard3.jpg    1x,
+                    ./images/teamcard3@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  loading="“lazy”"
+                  src="./images/teamcard3.jpg"
+                  alt="фотопортрет Миколи"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p lang="en" class="team__text">Marketing</p>
@@ -329,11 +419,35 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/teamcard4.jpg"
-                alt="фотопортрет Михайла "
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teamcard4.jpg    1x,
+                    ./images/mobile/teamcard4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teamcard4.jpg    1x,
+                    ./images/tablet/teamcard4@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard4.jpg    1x,
+                    ./images/teamcard4@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  loading="“lazy”"
+                  src="./images/teamcard4.jpg"
+                  alt="фотопортрет Миколи"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p lang="en" class="team__text">UI Designer</p>
