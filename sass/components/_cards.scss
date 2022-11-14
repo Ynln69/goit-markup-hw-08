@@ -73,10 +73,7 @@
     padding: 20px 24px;
     border: 1px solid var(--border-color);
   
-    background-color: var(--main-light-color);
-    @media screen and (min-width:1200px) {
-      width: 320px;
-    }
+    background-color: var(--main-light-color)
   }
   .card__title {
     margin-bottom: 4px;
