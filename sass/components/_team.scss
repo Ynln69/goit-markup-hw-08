@@ -4,21 +4,17 @@
 
       &__list {
         @extend %list;
+        display: flex;
+        gap: 30px;
         @media screen and (max-width:767px) {
-          display: flex;
           flex-direction: column;
-          gap: 30px;
        }
         @media screen and (min-width:768px) {
-          display: flex;
           flex-wrap: wrap;
-          gap: 30px;
         }
 
         @media screen and (min-width:1200px) {
-          display: flex;
           flex-direction: row;
-          gap: 30px;
         }
       }
 
@@ -57,8 +53,7 @@
         margin-bottom: 16px;
       }
   }
-  
-  
+
   .networks {
     @extend %list;
     display: flex;

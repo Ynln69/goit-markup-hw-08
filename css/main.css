@@ -520,38 +520,32 @@ img {
   width: 100%;
   background-color: var(--section-team-bg-color);
 }
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
 @media screen and (max-width: 767px) {
   .team__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 768px) {
   .team__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 30px;
   }
 }
 .team__box {
