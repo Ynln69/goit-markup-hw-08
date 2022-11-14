@@ -28,6 +28,7 @@
     padding: 0;
     border: none;
     cursor: pointer;
+    fill: var(--secondory-font-color);
     background-color: var(--main-light-color);
     transition: fill 250ms var(--time-function);
 

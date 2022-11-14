@@ -1,14 +1,22 @@
 .card {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -30px;
-    margin-right: -30px;
+    @media screen and (min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+      margin-right: -30px;
+    } 
   }
   .card__item {
-    width: calc(100% / 3 - 30px);
-    margin-right: 30px;
     margin-bottom: 30px;
+    @media screen and (min-width:768px) {
+      width: calc(100% / 2 - 30px);
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width:1200px) {
+      width: calc(100% / 3 - 30px);
+    }
   }
   
   .card__thumb {
@@ -50,7 +58,8 @@
   
   .card__link {
     @extend %link;
-    display: inline-block;
+    width: 100%;
+    display: block;
     transition: box-shadow 250ms var(--time-function);
 
         &:hover,
@@ -65,6 +74,9 @@
     border: 1px solid var(--border-color);
   
     background-color: var(--main-light-color);
+    @media screen and (min-width:1200px) {
+      width: 320px;
+    }
   }
   .card__title {
     margin-bottom: 4px;

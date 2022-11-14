@@ -379,14 +379,10 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .feature__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 30px;
   }
 }
 
@@ -955,6 +951,7 @@ img {
   padding: 0;
   border: none;
   cursor: pointer;
+  fill: var(--secondory-font-color);
   background-color: var(--main-light-color);
   -webkit-transition: fill 250ms var(--time-function);
   transition: fill 250ms var(--time-function);
