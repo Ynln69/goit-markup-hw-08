@@ -96,20 +96,22 @@
       }
       
       &__contact-link {
-        @media screen and (min-width:768px) {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 12px;
-          line-height: calc(14/12);
-        }
         @extend %link;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
         color: var(--main-font-color);
         fill: currentColor;
         font-weight: 500;
-        line-height: 1.14;
+        font-size: 12px;
+        line-height: calc(14/12);
         letter-spacing: 0.02em;
         transition: color 250ms var(--time-function);
+        @media screen and (min-width:1200px) {
+          font-size: 14px;
+          line-height: calc(16/14);
+        }
 
             &:hover,
             &:focus {

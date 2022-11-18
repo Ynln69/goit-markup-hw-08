@@ -1,6 +1,5 @@
 .hero {
     max-width: 480px;
-    height: 400px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 118px;
@@ -61,6 +60,9 @@
           line-height: calc(42/26);
           letter-spacing: 0.06em;
           text-transform: uppercase;
+          @media screen and (min-width:768px) {
+            width: 360px;
+          }
       
           @media screen and (min-width:1200px) {
             width: 696px;
