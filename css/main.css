@@ -1101,13 +1101,17 @@ img {
 .modal {
   position: relative;
   padding: 40px;
-  margin: 93px 15px;
   border-radius: 4px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
+  .modal {
+    margin: 93px 15px;
+  }
+}
+@media screen and (min-width: 480px) {
   .modal {
     position: absolute;
     top: 50%;
@@ -1123,17 +1127,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 528px;
     height: 581px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-transition: -webkit-transform 250ms var(--time-function);
-    transition: -webkit-transform 250ms var(--time-function);
-    transition: transform 250ms var(--time-function);
-    transition: transform 250ms var(--time-function), -webkit-transform 250ms var(--time-function);
   }
 }
 
