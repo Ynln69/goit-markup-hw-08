@@ -36,7 +36,14 @@
             fill: var(--accent-color);
         }
    }
-
+   .mobile-menu__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+   .mobile-menu__nav{
+    margin-bottom: auto;
+   }
     .mobile-menu__list {
         @extend %list;
         display: flex;
